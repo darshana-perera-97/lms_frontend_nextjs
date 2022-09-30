@@ -1,10 +1,12 @@
 import React from "react";
 import Profile from "../Components/Profile";
+import LinkList from "./LinkList";
 
 export default function NavgBar() {
   return (
-    <div>
+    <div style={{ background: "#5DFF72", height: "100vh" }}>
       <Profile />
+      <LinkList />
     </div>
   );
 }

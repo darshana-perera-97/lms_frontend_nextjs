@@ -18,7 +18,10 @@ export default function Profile() {
   }, []);
   return (
     <div>
-      {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
+      {userData.name}
+      {userData.year}
+      {userData.grade}
+      <img src={userData.imgLink} height="200vh" />
     </div>
   );
 }

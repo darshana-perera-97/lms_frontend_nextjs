@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import NavgBar from "../Layouts/NavgBar";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <div style={{ display: "flex" }}>
+      <NavgBar />
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
