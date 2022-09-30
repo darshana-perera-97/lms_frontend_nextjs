@@ -13,15 +13,40 @@ export default function Profile() {
       year: "13",
       grade: "C",
       imgLink:
-        "https://www.pngmart.com/files/22/User-Avatar-Profile-PNG-Isolated-Transparent-Picture.png",
+        "https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-users-icon-png-image_4144740.jpg",
     });
   }, []);
   return (
-    <div>
-      {userData.name}
-      {userData.year}
-      {userData.grade}
-      <img src={userData.imgLink} height="200vh" />
+    <div style={{ padding: "8vh 0vh", width: "35vh" }}>
+      <img
+        src={userData.imgLink}
+        height="200vh"
+        style={{
+          borderRadius: "500px",
+          marginLeft: "3vh",
+        }}
+      />
+      <p
+        style={{
+          textAlign: "center",
+          margin: "0px",
+          fontSize: "25px",
+          fontWeight: "bold",
+          marginTop: "3vh",
+        }}
+      >
+        {userData.name}
+      </p>
+      <p
+        style={{
+          textAlign: "center",
+          margin: "0px",
+          fontSize: "20px",
+          fontWeight: "bold",
+        }}
+      >
+        Grade {userData.year} {userData.grade}
+      </p>
     </div>
   );
 }
