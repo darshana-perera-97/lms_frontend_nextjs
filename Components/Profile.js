@@ -33,6 +33,7 @@ export default function Profile() {
           fontSize: "25px",
           fontWeight: "bold",
           marginTop: "3vh",
+          color: "white",
         }}
       >
         {userData.name}
@@ -43,6 +44,8 @@ export default function Profile() {
           margin: "0px",
           fontSize: "20px",
           fontWeight: "bold",
+          color: "white",
+          opacity: "0.7",
         }}
       >
         Grade {userData.year} {userData.grade}
