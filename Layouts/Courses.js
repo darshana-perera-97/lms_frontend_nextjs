@@ -2,12 +2,10 @@ import Link from "next/link";
 import React from "react";
 
 export default function Courses() {
-  const [homePageData, setHomePageData] = React.useState([
-    "English",
-    "Sinhala",
-    "Science",
-    "Maths",
-  ]);
+  const [courseList, setCourseList] = React.useState([]);
+  React.useEffect(() => {
+    setCourseList(["English", "Sinhala", "Science", "Maths"]);
+  }, []);
   return (
     <div
       style={{
@@ -20,8 +18,8 @@ export default function Courses() {
       <p style={{ margin: "0px", fontWeight: "bold", fontSize: "25px" }}>
         Courses
       </p>
-      {homePageData.map((val, key) => (
-        <Link href={val} key={key}>
+      {courseList.map((val, key) => (
+        <Link href={"subject/" + val} key={key}>
           <div
             style={{
               background: "#E7E7E7",
@@ -31,6 +29,7 @@ export default function Courses() {
               display: "flex",
               justifyContent: "space-between",
               width: "150vh",
+              cursor: "pointer",
             }}
           >
             <p style={{ margin: "0px", fontSize: "21px" }}>{val}</p>
